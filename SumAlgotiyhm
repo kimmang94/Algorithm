@@ -1,0 +1,27 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // [1] Input = Data Structer
+            // n명의 국어 점수
+            int[] scores = { 100, 75, 50, 37, 90, 95 };
+            int sum = 0;
+            // [2] Process = Algorithm
+            // 80 점 이상의 총점을 구하는 구문
+            for (int i = 0; i < scores.Length; i++)
+            {
+                if (scores[i] >= 80)
+                {
+                    sum += scores[i];
+                }
+            }
+
+            // [3] Output = UI
+            Console.WriteLine($"{scores.Length}명의 점수중 80점 이상의 총점 : {sum} ");
+        }
+    }
+}
