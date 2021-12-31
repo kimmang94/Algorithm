@@ -1,0 +1,27 @@
+using System;
+using System.Linq;
+
+namespace Algorithm
+{
+    class MainClass
+    {
+        public static void Main(string[] args)
+        {
+            // 갯수 알고리즘 : CountAlgorithm
+            // 1부터 1000까지의 정수 중 13의 배수의 갯수는?
+            // [1] Input
+            int count = 0;
+            int[] numbers = Enumerable.Range(1, 1_000).ToArray();
+            // [2] Process
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] % 13 == 0)
+                {
+                    count++;
+                }
+            }
+            // [3] Output
+            Console.WriteLine($"13의 배수의 갯수 : {count}");
+        }
+    }
+}
