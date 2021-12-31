@@ -1,0 +1,31 @@
+using System;
+
+namespace Algorithm
+{
+    class MainClass
+    {
+        public static void Main(string[] args)
+        {
+            // [1] 디버거 를 사용하여 디버깅하기 : F9 -> F5 -> F11 ->F5
+
+            // 등차수열 홀수의 합 구하기
+            // ArithmeticSequence : 등차수열 연속하는 두 수의 차이가 일정한 수열
+            // [?] 1부터 20까지의 정수 중 홀수의 합을 구하는 프로그램
+            // 1, 3, 5, 7, 9, ....
+
+            // [1] Input
+            var sum = 0;
+            // [2] Process
+            for (int i = 0; i <= 20; i++)
+            {
+                if (i % 2 == 1)
+                {
+                    sum += i;
+                    Console.Write("{0, 2} ", i);
+                }
+            }
+            // [3] Output
+            Console.WriteLine($"\n 1부터 20까지의 홀수의 합은 : {sum}");
+        }
+    }
+}
