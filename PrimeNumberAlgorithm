@@ -1,0 +1,30 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class PrimeNumberAlgorithm
+    {
+        static void Main(string[] args)
+        {
+            var num = 0;
+            Console.Write("수 입력 : _\b");
+            num = Convert.ToInt32(Console.ReadLine());
+
+            var i = 1;
+            do
+            {
+                i = i + 1;
+                Console.WriteLine($"{num} % {i} = {num % i}");
+            } while (num % i != 0);
+
+            if (num == i)
+            {
+                Console.WriteLine("소수");
+            }
+            else
+            {
+                Console.WriteLine("소수가 아님");
+            }
+        }
+    }
+}
